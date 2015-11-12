@@ -11,7 +11,6 @@ Standards-Version: 3.9.6
 
 Package: teckit
 Architecture: any
-Section: text
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Multi-Arch: same
 Description: Encoding conversion library
