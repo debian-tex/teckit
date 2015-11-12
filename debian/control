@@ -4,14 +4,14 @@ Build-Depends: dh-autoreconf,
                pkg-config,
                zlib1g-dev,
                libexpat1-dev
-Section: devel
+Section: text
 Priority: optional
 Maintainer: Daniel Glassey <wdg@debian.org>
 Standards-Version: 3.7.2
 
 Package: teckit
 Architecture: any
-Section: devel
+Section: text
 Depends: ${shlibs:Depends}
 Description: Encoding conversion library
  Provides a generic library for converting data too and from Unicode
