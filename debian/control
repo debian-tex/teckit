@@ -24,7 +24,7 @@ Description: Encoding conversion library
 Package: libteckit-dev
 Architecture: any
 Section: libdevel
-Depends: teckit (= ${Source-Version}), ${misc:Depends}
+Depends: teckit (= ${source:Version}), ${misc:Depends}
 Multi-Arch: same
 Description: Development files for TECkit encoding conversion library
  Provides a generic library for converting data to and from Unicode
