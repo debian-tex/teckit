@@ -1,5 +1,11 @@
 Source: teckit
-Build-Depends: autotools-dev, cdbs (>= 0.4.27-1), perl (>= 5.8.0), debhelper (>= 4.2.21), pkg-config, zlib1g-dev, libexpat1-dev
+Build-Depends: autotools-dev,
+               cdbs (>= 0.4.27-1),
+               perl (>= 5.8.0),
+               debhelper (>= 9~),
+               pkg-config,
+               zlib1g-dev,
+               libexpat1-dev
 Section: devel
 Priority: optional
 Maintainer: Daniel Glassey <wdg@debian.org>
