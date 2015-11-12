@@ -1,3 +1,9 @@
+teckit (2.5.4~svn140+ds1-1) UNRELEASED; urgency=medium
+
+  * Initial release to Debian
+
+ -- Daniel Glassey <wdg@debian.org>  Thu, 12 Nov 2015 22:49:39 +0000
+
 teckit (2.5.4~beta1) stable; urgency=medium
 
   * Update Unicode character names and normalization data to 7.0.0
