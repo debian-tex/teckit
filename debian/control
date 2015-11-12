@@ -1,6 +1,5 @@
 Source: teckit
-Build-Depends: autotools-dev,
-               cdbs (>= 0.4.27-1),
+Build-Depends: dh-autoreconf,
                debhelper (>= 9~),
                pkg-config,
                zlib1g-dev,
