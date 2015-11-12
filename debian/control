@@ -1,7 +1,6 @@
 Source: teckit
 Build-Depends: autotools-dev,
                cdbs (>= 0.4.27-1),
-               perl (>= 5.8.0),
                debhelper (>= 9~),
                pkg-config,
                zlib1g-dev,
@@ -29,11 +28,3 @@ Section: libdevel
 Depends: libteckit (= ${Source-Version})
 Description: Development files for TECkit
  Development files to allow linking to libteckit for data conversion
-
-Package: libteckit-perl
-Architecture: any
-Section: perl
-Depends: perl (>= 5.8.0)
-Description: Perl module to access TECkit converter
- This Perl module is a statically linked teckit engine
-
