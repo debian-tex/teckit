@@ -7,12 +7,12 @@ Build-Depends: dh-autoreconf,
 Section: text
 Priority: optional
 Maintainer: Daniel Glassey <wdg@debian.org>
-Standards-Version: 3.7.2
+Standards-Version: 3.9.6
 
 Package: teckit
 Architecture: any
 Section: text
-Depends: ${shlibs:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Encoding conversion library
  Provides a generic library for converting data too and from Unicode
  And also from Unicode <> Unicode.
@@ -24,6 +24,6 @@ Description: Encoding conversion library
 Package: libteckit-dev
 Architecture: any
 Section: libdevel
-Depends: libteckit (= ${Source-Version})
+Depends: libteckit (= ${Source-Version}), ${misc:Depends}
 Description: Development files for TECkit
  Development files to allow linking to libteckit for data conversion
