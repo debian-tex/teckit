@@ -1,0 +1,30 @@
+teckit (2.5.4~beta1) stable; urgency=medium
+
+  * Update Unicode character names and normalization data to 7.0.0
+  * Fix data normalization bug
+  * Update tests
+
+ -- Neil Mayhew <neil_mayhew@sil.org>  Mon, 30 Jun 2014 17:17:45 -0600
+
+teckit (2.5.3) maverick; urgency=low
+
+  * Update Unicode character names and normalization data to 6.0.0
+  * Update copyright dates and contact details
+
+ -- Neil Mayhew <neil_mayhew@sil.org>  Wed, 12 Jan 2011 21:26:48 -0700
+
+teckit (2.5.2) intrepid; urgency=low
+
+  * Fix Perl handling 0 length return strings
+
+ -- Martin Hosken <martin_hosken@sil.org>  Fri, 30 Jan 2009 19:14:38 +0700
+
+teckit (2.5.1-1ubuntu1~hardy) hardy; urgency=low
+
+  * Package v2.5.1
+
+ -- Martin Hosken <martin_hosken@sil.org>  Thu, 03 Apr 2008 15:11:04 +0700
+
+Local variables:
+mode: debian-changelog
+End:
