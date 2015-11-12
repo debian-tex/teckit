@@ -1,8 +1,8 @@
-teckit (2.5.4~svn140+ds1-1) UNRELEASED; urgency=medium
+teckit (2.5.4~svn140+ds1-1) stable; urgency=medium
 
   * Initial release to Debian
 
- -- Daniel Glassey <wdg@debian.org>  Thu, 12 Nov 2015 22:49:39 +0000
+ -- Daniel Glassey <wdg@debian.org>  Thu, 12 Nov 2015 23:35:57 +0000
 
 teckit (2.5.4~beta1) stable; urgency=medium
 
