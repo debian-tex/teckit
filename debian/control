@@ -12,7 +12,7 @@ Standards-Version: 3.9.6
 Package: teckit
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Multi-Arch: same
+Multi-Arch: foreign
 Description: Encoding conversion library
  Provides a generic library for converting data to and from Unicode
  And also from Unicode <> Unicode.
