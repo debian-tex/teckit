@@ -1,2 +1,3 @@
 the source is a subversion snapshot
 +ds1 means that the zlib source files have been removed
++ds2 means that the expat source files have also been removed

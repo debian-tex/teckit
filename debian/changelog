@@ -1,6 +1,18 @@
-teckit (2.5.4~svn140+ds1-1) stable; urgency=medium
+teckit (2.5.4~svn140+ds1-2) UNRELEASED; urgency=medium
 
   * Initial release to Debian
+
+ -- Daniel Glassey <wdg@debian.org>  Fri, 13 Nov 2015 19:43:31 +0000
+
+teckit (2.5.4~svn140+ds1-1) unstable; urgency=medium
+
+  * move to debhelper 9
+  * add a couple of manpages
+  * machine readable copyright
+  * add libteckit0 package
+  * multiarch enable
+  * remove perl package
+  * 3.0 (quilt) format
 
  -- Daniel Glassey <wdg@debian.org>  Thu, 12 Nov 2015 23:35:57 +0000
 
