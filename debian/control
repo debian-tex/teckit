@@ -2,6 +2,7 @@ Source: teckit
 Build-Depends: dh-autoreconf,
                debhelper (>= 9~),
                pkg-config,
+               chrpath,
                zlib1g-dev,
                libexpat1-dev
 Section: text

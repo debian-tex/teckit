@@ -1,7 +1,14 @@
 #!/usr/bin/make -f
 
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+
 %:
 	dh $@ --with autoreconf
 
 override_dh_clean:
 	dh_clean -X.orig
+
+override_dh_install:
+	chrpath -d debian/tmp/usr/bin/* debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/*so*
+	dh_install --list-missing
+
