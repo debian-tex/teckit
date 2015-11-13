@@ -12,7 +12,8 @@ Standards-Version: 3.9.6
 
 Package: teckit
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends},
+         libteckit0 (= ${binary:Version})
 Multi-Arch: foreign
 Description: Encoding conversion tools
  Provides tools for converting data to and from Unicode
@@ -41,7 +42,7 @@ Description: Encoding conversion library
 Package: libteckit-dev
 Architecture: any
 Section: libdevel
-Depends: libteckit (= ${source:Version}), ${misc:Depends}
+Depends: libteckit0 (= ${binary:Version}), ${misc:Depends}
 Multi-Arch: same
 Description: Development files for TECkit encoding conversion library
  Provides a generic library for converting data to and from Unicode
