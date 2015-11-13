@@ -1,0 +1,2 @@
+# the libraries in the package do not determine the package name
+teckit binary: package-name-doesnt-match-sonames
