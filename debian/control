@@ -13,6 +13,20 @@ Package: teckit
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Multi-Arch: foreign
+Description: Encoding conversion tools
+ Provides tools for converting data to and from Unicode
+ And also from Unicode <> Unicode.
+ .
+ It also includes a compiler for a description language that allows
+ for bidirectional conversion description (the same description is
+ used for conversion to and from Unicode, for example).
+
+Package: libteckit0
+Architecture: any
+Section: libs
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Multi-Arch: same
 Description: Encoding conversion library
  Provides a generic library for converting data to and from Unicode
  And also from Unicode <> Unicode.
@@ -20,11 +34,13 @@ Description: Encoding conversion library
  It also includes a compiler for a description language that allows
  for bidirectional conversion description (the same description is
  used for conversion to and from Unicode, for example).
+ .
+ This package contains the shared libraries.
 
 Package: libteckit-dev
 Architecture: any
 Section: libdevel
-Depends: teckit (= ${source:Version}), ${misc:Depends}
+Depends: libteckit (= ${source:Version}), ${misc:Depends}
 Multi-Arch: same
 Description: Development files for TECkit encoding conversion library
  Provides a generic library for converting data to and from Unicode
