@@ -1,18 +1,25 @@
-teckit (2.5.4~svn140+ds2-1) UNRELEASED; urgency=medium
+teckit (2.5.4~svn140+ds2-1) experimental; urgency=medium
 
   * Initial release to Debian, Closes: #805054
+  * +ds2 source removes expat source
+  * Add patches from texlive-bin-2015.20150524.37493
+  * Upload to experimental to co-ordinate with debian-tex-maint  
+  * Conflict with texlive-binaries (<= 2015.20150524.37493-7)
+      both contain teckit_compile 
 
- -- Daniel Glassey <wdg@debian.org>  Fri, 13 Nov 2015 19:43:31 +0000
+ -- Daniel Glassey <wdg@debian.org>  Sat, 14 Nov 2015 17:42:52 +0000
 
 teckit (2.5.4~svn140+ds1-1) unstable; urgency=medium
 
   * move to debhelper 9
+  * +ds1 source removes zlib source
   * add a couple of manpages
   * machine readable copyright
   * add libteckit0 package
   * multiarch enable
   * remove perl package
   * 3.0 (quilt) format
+  * current svn checkout
 
  -- Daniel Glassey <wdg@debian.org>  Thu, 12 Nov 2015 23:35:57 +0000
 
