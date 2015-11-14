@@ -14,6 +14,7 @@ Package: teckit
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
          libteckit0 (= ${binary:Version})
+Conflicts: texlive-binaries (<= 2015.20150524.37493-7)
 Multi-Arch: foreign
 Description: Encoding conversion tools for plain text files
  TECkit provides tools for converting data to and from Unicode
