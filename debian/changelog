@@ -7,6 +7,7 @@ teckit (2.5.4~svn140+ds2-1) experimental; urgency=medium
   * Conflict with texlive-binaries (<= 2015.20150524.37493-7)
       both contain teckit_compile 
   * Improve description
+  * Add Debian TeX and Norbert Preining as uploaders
 
  -- Daniel Glassey <wdg@debian.org>  Sat, 14 Nov 2015 17:42:52 +0000
 
