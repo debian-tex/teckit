@@ -8,6 +8,8 @@ Build-Depends: dh-autoreconf,
 Section: text
 Priority: optional
 Maintainer: Daniel Glassey <wdg@debian.org>
+Uploaders:  Norbert Preining <preining@debian.org>,
+            Debian TeX Maintainers <debian-tex-maint@lists.debian.org>
 Standards-Version: 3.9.6
 
 Package: teckit
