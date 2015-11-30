@@ -9,7 +9,7 @@ teckit (2.5.4~svn140+ds2-1) experimental; urgency=medium
   * Improve description
   * Add Debian TeX and Norbert Preining as uploaders
 
- -- Daniel Glassey <wdg@debian.org>  Sat, 14 Nov 2015 17:42:52 +0000
+ -- Daniel Glassey <wdg@debian.org>  Mon, 30 Nov 2015 15:28:43 +0700
 
 teckit (2.5.4~svn140+ds1-1) unstable; urgency=medium
 
