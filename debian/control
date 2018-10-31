@@ -1,6 +1,5 @@
 Source: teckit
-Build-Depends: dh-autoreconf,
-               debhelper (>= 9~),
+Build-Depends: debhelper (>=11),
                pkg-config,
                chrpath,
                zlib1g-dev,
@@ -16,7 +15,7 @@ Package: teckit
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
          libteckit0 (= ${binary:Version})
-Conflicts: texlive-binaries (<= 2015.20150524.37493-7)
+Conflicts: texlive-binaries (<= 2018.20180907.48586-2)
 Multi-Arch: foreign
 Description: Custom legacy encoding conversion tools for plain text files
  TECkit is a toolkit for encoding conversions. It offers a simple format for
