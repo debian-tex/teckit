@@ -2,3 +2,4 @@ patch-02-warning
 patch-03-warnings
 patch-04-pragmas
 #patch-05-static
+#patch-06-dont-build-sfconv
