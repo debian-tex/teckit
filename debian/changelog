@@ -3,6 +3,8 @@ teckit (2.5.8+ds2-1) experimental; urgency=medium
   * new upstream release 2.5.8
   * d/compat version 11
   * d/control update dependencies
+  * d/rules add hardening
+  * add d/libteckit0.symbols
 
  -- Daniel Glassey <wdg@debian.org>  Wed, 31 Oct 2018 16:24:45 +0700
 
