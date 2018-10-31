@@ -10,7 +10,7 @@
 using namespace std;
 
 #include "TECkit_Engine.h"
-#include "ConvertUTF.h"
+#include "UtfCodec.h"
 #include "sfReader.h"
 
 #ifndef platformUTF16
@@ -95,16 +95,21 @@ streq(const char* s, const char* t)
 static ustring
 Utf8ToString(const char* s)
 {
-	int	len = strlen(s);
-	UniChar*	buf = new UniChar[len];
-	const Byte*	sourceStart = (Byte*)s;
-	UniChar*	targetStart = buf;
-	int	status = ConvertUTF8toUTF16(&sourceStart, sourceStart + len, &targetStart, targetStart + len, lenientConversion);
-	if (status != conversionOK) {
-		fprintf(stderr, "error %d converting UTF-8 to UTF-16\n", status);
+	int len = strlen(s);
+	utf16::codeunit_t * const buf = new utf16::codeunit_t[len];
+	
+	utf16::iterator out = buf;
+	utf8::const_iterator in  = s, 
+	                     end = s + len;
+    while (in != end && !(in.error() || out.error()))
+        *out++ = *in++;
+    
+	if (in.error() || out.error()) {
+		fprintf(stderr, "error %d converting UTF-8 to UTF-16\n", 4);
 		exit(1);
 	}
-	ustring		ustr(buf, targetStart - buf);
+
+    ustring ustr(buf, out - buf);
 	delete[] buf;
 	return ustr;
 }
@@ -313,7 +318,7 @@ makeConverter(const string& mappingName, int direction)
 		fprintf(stderr, "unable to read mapping file for %s (file %s)\n", mappingName.c_str(), mapFileName.c_str());
 		exit(1);
 	}
-	fread(buf, 1, fileSize, mapFile);
+	fileSize = fread(buf, 1, fileSize, mapFile);
 	fclose(mapFile);
 	
 	TECkit_Converter	converter;
@@ -629,7 +634,7 @@ process(const char* inputFile, const char* outputFile)
 		// *** Unicode to Byte conversion
 		Byte	bom[3];
 		long	pos = ftell(inFile);
-		if (fread(bom, 3, 1, inFile)) {
+		if (fread(bom, 3, 1, inFile) > 0) {
 			if (bom[0] == 0xef && bom[1] == 0xbb && bom[2] == 0xbf) {
 				inForm = kForm_UTF8;
 			}
