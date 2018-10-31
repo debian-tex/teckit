@@ -1093,7 +1093,7 @@ if (traceLevel > 0) {
 			if (matchElems == 0 && allowInsertion == false)
 				continue;
 			patternLength = matchElems + READ(rule->postLength);
-			pattern = (MatchElem*)(rule + 1);	// point past the defined struct for the rule header
+			pattern = (const MatchElem*)(rule + 1);	// point past the defined struct for the rule header
 			direction = 1;
 			infoLimit = matchElems;
 
@@ -2194,7 +2194,7 @@ TECkit_GetMappingName(
 				status = kStatus_BadMappingVersion;
 			else {
 				const Byte*	namePtr;
-				if (getNamePtrFromTable((Byte*)fh, nameID, namePtr, *nameLength)) {
+				if (getNamePtrFromTable((const Byte*)fh, nameID, namePtr, *nameLength)) {
 					UInt16	copyBytes = *nameLength < bufferSize ? *nameLength : bufferSize;
 					if (copyBytes > 0)
 						memcpy(nameBuffer, namePtr, copyBytes);
