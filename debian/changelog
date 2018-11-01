@@ -9,6 +9,7 @@ teckit (2.5.8+ds2-1) experimental; urgency=medium
   * d/control add github homepage and salsa vcs
       update dependencies
       standards 4.2.1 (no changes)
+      add breaks/replaces on current texlive
   * d/copyright add Files-Excluded
       update licensing of some files 
 
