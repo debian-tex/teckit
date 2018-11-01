@@ -1,3 +1,11 @@
+teckit (2.5.8+ds2-3) experimental; urgency=medium
+
+  * add build-dep on pkg-kde-tools
+  * d/rules --with pkgkde_symbolshelper
+  * first batch of libteckit0.symbols updates from builds
+
+ -- Daniel Glassey <wdg@debian.org>  Thu, 01 Nov 2018 13:32:33 +0700
+
 teckit (2.5.8+ds2-2) experimental; urgency=medium
 
   * amd64 symbols to get others from build logs

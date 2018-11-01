@@ -3,7 +3,8 @@ Build-Depends: debhelper (>=11),
                pkg-config,
                chrpath,
                zlib1g-dev,
-               libexpat1-dev
+               libexpat1-dev,
+               pkg-kde-tools
 Section: text
 Priority: optional
 Maintainer: Daniel Glassey <wdg@debian.org>
