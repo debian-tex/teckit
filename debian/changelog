@@ -1,3 +1,10 @@
+teckit (2.5.8+ds2-2) experimental; urgency=medium
+
+  * amd64 symbols to get others from build logs
+      because of C++ lib
+
+ -- Daniel Glassey <wdg@debian.org>  Thu, 01 Nov 2018 11:24:11 +0700
+
 teckit (2.5.8+ds2-1) experimental; urgency=medium
 
   * new upstream release 2.5.8
