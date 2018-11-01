@@ -2,9 +2,15 @@ teckit (2.5.8+ds2-1) experimental; urgency=medium
 
   * new upstream release 2.5.8
   * d/compat version 11
-  * d/control update dependencies
   * d/rules add hardening
   * add d/libteckit0.symbols
+  * d/watch add watch file for github
+  * add upstream signing key
+  * d/control add github homepage and salsa vcs
+      update dependencies
+      standards 4.2.1 (no changes)
+  * d/copyright add Files-Excluded
+      update licensing of some files 
 
  -- Daniel Glassey <wdg@debian.org>  Wed, 31 Oct 2018 16:24:45 +0700
 

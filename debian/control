@@ -9,7 +9,10 @@ Priority: optional
 Maintainer: Daniel Glassey <wdg@debian.org>
 Uploaders:  Norbert Preining <preining@debian.org>,
             Debian TeX Maintainers <debian-tex-maint@lists.debian.org>
-Standards-Version: 3.9.6
+Standards-Version: 4.2.1
+Homepage: https://github.com/silnrsi/teckit
+Vcs-Browser: https://salsa.debian.org/tex-team/teckit
+Vcs-Git: https://salsa.debian.org/tex-team/teckit.git
 
 Package: teckit
 Architecture: any
