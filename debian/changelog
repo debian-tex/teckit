@@ -1,7 +1,8 @@
-teckit (2.5.8+ds2-4~pre1) unstable; urgency=medium
+teckit (2.5.8+ds2-4) unstable; urgency=medium
 
   * Release to unstable for texlive-bin to use
   * d/control remove Conflicts
+      Build/Replaces on texlive-bin (<< 2018.20180907.48586-3~)
 
  -- Daniel Glassey <wdg@debian.org>  Sat, 03 Nov 2018 10:09:31 +0700
 
