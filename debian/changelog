@@ -1,3 +1,10 @@
+teckit (2.5.8+ds2-4~pre1) unstable; urgency=medium
+
+  * Release to unstable for texlive-bin to use
+  * d/control remove Conflicts
+
+ -- Daniel Glassey <wdg@debian.org>  Sat, 03 Nov 2018 10:09:31 +0700
+
 teckit (2.5.8+ds2-3) experimental; urgency=medium
 
   * add build-dep on pkg-kde-tools
