@@ -1,3 +1,4 @@
+From: texlive-bin package <debian-tex-maint@lists.debian.org>
 	Remove the '#pragma's, they seem to cause problems for MSVC
 	and are certainly not needed otherwise.
 

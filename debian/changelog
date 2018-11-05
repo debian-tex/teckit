@@ -1,3 +1,9 @@
+teckit (2.5.8+ds2-5) unstable; urgency=medium
+
+  * d/libteckit0.symbols add symbols for armel, armhf
+
+ -- Daniel Glassey <wdg@debian.org>  Mon, 05 Nov 2018 14:28:08 +0700
+
 teckit (2.5.8+ds2-4) unstable; urgency=medium
 
   * Release to unstable for texlive-bin to use
