@@ -118,8 +118,8 @@ libTECkit_Compiler.so.0 libteckit0 #MINVER#
  _ZN8Compiler4Pass9setLineNoEj@Base 2.5.8
  _ZN8Compiler4PassD1Ev@Base 2.5.8
  _ZN8Compiler4PassD2Ev@Base 2.5.8
- (arch=!mips !powerpc !powerpcspe !ppc64 !s390x)_ZN8Compiler4RuleC1ERKSt6vectorINS_4ItemESaIS2_EES6_S6_S6_j@Base 2.5.8
- (arch=!mips !powerpc !powerpcspe !ppc64 !s390x)_ZN8Compiler4RuleC2ERKSt6vectorINS_4ItemESaIS2_EES6_S6_S6_j@Base 2.5.8
+ (arch=!mips !powerpc !powerpcspe !ppc64 !ppc64el !s390x)_ZN8Compiler4RuleC1ERKSt6vectorINS_4ItemESaIS2_EES6_S6_S6_j@Base 2.5.8
+ (arch=!mips !powerpc !powerpcspe !ppc64 !ppc64el !s390x)_ZN8Compiler4RuleC2ERKSt6vectorINS_4ItemESaIS2_EES6_S6_S6_j@Base 2.5.8
  _ZN8Compiler4RuleD1Ev@Base 2.5.8
  _ZN8Compiler4RuleD2Ev@Base 2.5.8
  _ZN8Compiler5ErrorEPKcS1_j@Base 2.5.8
