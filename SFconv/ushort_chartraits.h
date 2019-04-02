@@ -1,5 +1,4 @@
-#ifndef __ushort_chartraits_h__
-#define __ushort_chartraits_h__
+#pragma once
 
 #include <iostream>
 #include <string>
@@ -52,7 +51,7 @@ namespace std
       { 
         const char_type* __p = __s; 
         while (*__p) ++__p; 
-        return (__p - __s); 
+        return static_cast<size_t>(__p - __s);
       }
 
       static const char_type* 
@@ -65,11 +64,11 @@ namespace std
 
       static char_type* 
       move(char_type* __s1, const char_type* __s2, size_t __n)
-      { return (char_type*) memmove(__s1, __s2, __n * sizeof(char_type)); }
+      { return static_cast<char_type*>(memmove(__s1, __s2, __n * sizeof(char_type))); }
 
       static char_type* 
       copy(char_type* __s1, const char_type* __s2, size_t __n)
-      { return (char_type*) memcpy(__s1, __s2, __n * sizeof(char_type)); }
+      { return static_cast<char_type*>(memcpy(__s1, __s2, __n * sizeof(char_type))); }
 
       static char_type* 
       assign(char_type* __s, size_t __n, char_type __a)
@@ -91,12 +90,10 @@ namespace std
       { return __c1 == __c2; }
 
       static int_type 
-      eof() { return static_cast<int_type>(-1); }
+      eof() { return int_type(-1); }
 
       static int_type 
       not_eof(const int_type& __c)
       { return eq_int_type(__c, eof()) ? int_type(0) : __c; }
     };
 }
-
-#endif
