@@ -1,5 +1,5 @@
 Source: teckit
-Build-Depends: debhelper (>=11),
+Build-Depends: debhelper (>=12),
                pkg-config,
                chrpath,
                zlib1g-dev,
