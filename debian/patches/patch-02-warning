@@ -1,10 +1,13 @@
 From: texlive-bin package <debian-tex-maint@lists.debian.org>
 	Avoid compiler warning.
 
-diff -ur teckit-2.5.8/source/Compiler.h teckit-src/source/Compiler.h
---- teckit-2.5.8/source/Compiler.h	Tue Dec 05 07:20:20 2017
-+++ teckit-src/source/Compiler.h	Tue Jul 24 07:21:23 2018
-@@ -230,7 +230,7 @@
+---
+ source/Compiler.h |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+--- teckit.orig/source/Compiler.h
++++ teckit/source/Compiler.h
+@@ -229,7 +229,7 @@ protected:
  		vector<UInt32>		byteClassLines;
  		vector<UInt32>		uniClassLines;
  
