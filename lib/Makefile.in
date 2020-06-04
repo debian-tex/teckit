@@ -95,8 +95,8 @@ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/libtool.m4 \
 	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
 	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
-	$(top_srcdir)/zlib-1.2.3/withenable.ac \
-	$(top_srcdir)/zlib-1.2.3/zlib.ac $(top_srcdir)/configure.ac
+	$(top_srcdir)/zlib-1.2.11/withenable.ac \
+	$(top_srcdir)/zlib-1.2.11/zlib.ac $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 DIST_COMMON = $(srcdir)/Makefile.am $(noinst_HEADERS) \
@@ -141,6 +141,10 @@ am__TECkit_Compiler_x86_la_SOURCES_DIST =  \
 	@top_builddir@/@ZLIBDIR@/compress.c \
 	@top_builddir@/@ZLIBDIR@/crc32.c \
 	@top_builddir@/@ZLIBDIR@/deflate.c \
+	@top_builddir@/@ZLIBDIR@/gzclose.c \
+	@top_builddir@/@ZLIBDIR@/gzlib.c \
+	@top_builddir@/@ZLIBDIR@/gzread.c \
+	@top_builddir@/@ZLIBDIR@/gzwrite.c \
 	@top_builddir@/@ZLIBDIR@/infback.c \
 	@top_builddir@/@ZLIBDIR@/inffast.c \
 	@top_builddir@/@ZLIBDIR@/inflate.c \
@@ -148,12 +152,27 @@ am__TECkit_Compiler_x86_la_SOURCES_DIST =  \
 	@top_builddir@/@ZLIBDIR@/trees.c \
 	@top_builddir@/@ZLIBDIR@/uncompr.c \
 	@top_builddir@/@ZLIBDIR@/zutil.c \
+	@top_builddir@/@ZLIBDIR@/crc32.h \
+	@top_builddir@/@ZLIBDIR@/deflate.h \
+	@top_builddir@/@ZLIBDIR@/gzguts.h \
+	@top_builddir@/@ZLIBDIR@/inffast.h \
+	@top_builddir@/@ZLIBDIR@/inffixed.h \
+	@top_builddir@/@ZLIBDIR@/inflate.h \
+	@top_builddir@/@ZLIBDIR@/inftrees.h \
+	@top_builddir@/@ZLIBDIR@/trees.h \
+	@top_builddir@/@ZLIBDIR@/zconf.h \
+	@top_builddir@/@ZLIBDIR@/zlib.h \
+	@top_builddir@/@ZLIBDIR@/zutil.h \
 	@top_builddir@/source/UnicodeNames.cpp
 am__dirstamp = $(am__leading_dot)dirstamp
 @SYSTEM_ZLIB_FALSE@am__objects_1 = @top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-adler32.lo \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-compress.lo \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-crc32.lo \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-deflate.lo \
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-gzclose.lo \
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-gzlib.lo \
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-gzread.lo \
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-gzwrite.lo \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-infback.lo \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-inffast.lo \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-inflate.lo \
@@ -182,17 +201,36 @@ am__TECkit_x86_la_SOURCES_DIST = @top_builddir@/source/Engine.cpp \
 	@top_builddir@/@ZLIBDIR@/compress.c \
 	@top_builddir@/@ZLIBDIR@/crc32.c \
 	@top_builddir@/@ZLIBDIR@/deflate.c \
+	@top_builddir@/@ZLIBDIR@/gzclose.c \
+	@top_builddir@/@ZLIBDIR@/gzlib.c \
+	@top_builddir@/@ZLIBDIR@/gzread.c \
+	@top_builddir@/@ZLIBDIR@/gzwrite.c \
 	@top_builddir@/@ZLIBDIR@/infback.c \
 	@top_builddir@/@ZLIBDIR@/inffast.c \
 	@top_builddir@/@ZLIBDIR@/inflate.c \
 	@top_builddir@/@ZLIBDIR@/inftrees.c \
 	@top_builddir@/@ZLIBDIR@/trees.c \
 	@top_builddir@/@ZLIBDIR@/uncompr.c \
-	@top_builddir@/@ZLIBDIR@/zutil.c
+	@top_builddir@/@ZLIBDIR@/zutil.c \
+	@top_builddir@/@ZLIBDIR@/crc32.h \
+	@top_builddir@/@ZLIBDIR@/deflate.h \
+	@top_builddir@/@ZLIBDIR@/gzguts.h \
+	@top_builddir@/@ZLIBDIR@/inffast.h \
+	@top_builddir@/@ZLIBDIR@/inffixed.h \
+	@top_builddir@/@ZLIBDIR@/inflate.h \
+	@top_builddir@/@ZLIBDIR@/inftrees.h \
+	@top_builddir@/@ZLIBDIR@/trees.h \
+	@top_builddir@/@ZLIBDIR@/zconf.h \
+	@top_builddir@/@ZLIBDIR@/zlib.h \
+	@top_builddir@/@ZLIBDIR@/zutil.h
 @SYSTEM_ZLIB_FALSE@am__objects_2 = @top_builddir@/@ZLIBDIR@/TECkit_x86_la-adler32.lo \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/TECkit_x86_la-compress.lo \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/TECkit_x86_la-crc32.lo \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/TECkit_x86_la-deflate.lo \
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/TECkit_x86_la-gzclose.lo \
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/TECkit_x86_la-gzlib.lo \
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/TECkit_x86_la-gzread.lo \
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/TECkit_x86_la-gzwrite.lo \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/TECkit_x86_la-infback.lo \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/TECkit_x86_la-inffast.lo \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/TECkit_x86_la-inflate.lo \
@@ -215,17 +253,36 @@ am__libTECkit_la_SOURCES_DIST = @top_builddir@/source/Engine.cpp \
 	@top_builddir@/@ZLIBDIR@/compress.c \
 	@top_builddir@/@ZLIBDIR@/crc32.c \
 	@top_builddir@/@ZLIBDIR@/deflate.c \
+	@top_builddir@/@ZLIBDIR@/gzclose.c \
+	@top_builddir@/@ZLIBDIR@/gzlib.c \
+	@top_builddir@/@ZLIBDIR@/gzread.c \
+	@top_builddir@/@ZLIBDIR@/gzwrite.c \
 	@top_builddir@/@ZLIBDIR@/infback.c \
 	@top_builddir@/@ZLIBDIR@/inffast.c \
 	@top_builddir@/@ZLIBDIR@/inflate.c \
 	@top_builddir@/@ZLIBDIR@/inftrees.c \
 	@top_builddir@/@ZLIBDIR@/trees.c \
 	@top_builddir@/@ZLIBDIR@/uncompr.c \
-	@top_builddir@/@ZLIBDIR@/zutil.c
+	@top_builddir@/@ZLIBDIR@/zutil.c \
+	@top_builddir@/@ZLIBDIR@/crc32.h \
+	@top_builddir@/@ZLIBDIR@/deflate.h \
+	@top_builddir@/@ZLIBDIR@/gzguts.h \
+	@top_builddir@/@ZLIBDIR@/inffast.h \
+	@top_builddir@/@ZLIBDIR@/inffixed.h \
+	@top_builddir@/@ZLIBDIR@/inflate.h \
+	@top_builddir@/@ZLIBDIR@/inftrees.h \
+	@top_builddir@/@ZLIBDIR@/trees.h \
+	@top_builddir@/@ZLIBDIR@/zconf.h \
+	@top_builddir@/@ZLIBDIR@/zlib.h \
+	@top_builddir@/@ZLIBDIR@/zutil.h
 @SYSTEM_ZLIB_FALSE@am__objects_3 = @top_builddir@/@ZLIBDIR@/libTECkit_la-adler32.lo \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/libTECkit_la-compress.lo \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/libTECkit_la-crc32.lo \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/libTECkit_la-deflate.lo \
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/libTECkit_la-gzclose.lo \
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/libTECkit_la-gzlib.lo \
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/libTECkit_la-gzread.lo \
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/libTECkit_la-gzwrite.lo \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/libTECkit_la-infback.lo \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/libTECkit_la-inffast.lo \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/libTECkit_la-inflate.lo \
@@ -248,6 +305,10 @@ am__libTECkit_Compiler_la_SOURCES_DIST =  \
 	@top_builddir@/@ZLIBDIR@/compress.c \
 	@top_builddir@/@ZLIBDIR@/crc32.c \
 	@top_builddir@/@ZLIBDIR@/deflate.c \
+	@top_builddir@/@ZLIBDIR@/gzclose.c \
+	@top_builddir@/@ZLIBDIR@/gzlib.c \
+	@top_builddir@/@ZLIBDIR@/gzread.c \
+	@top_builddir@/@ZLIBDIR@/gzwrite.c \
 	@top_builddir@/@ZLIBDIR@/infback.c \
 	@top_builddir@/@ZLIBDIR@/inffast.c \
 	@top_builddir@/@ZLIBDIR@/inflate.c \
@@ -255,11 +316,26 @@ am__libTECkit_Compiler_la_SOURCES_DIST =  \
 	@top_builddir@/@ZLIBDIR@/trees.c \
 	@top_builddir@/@ZLIBDIR@/uncompr.c \
 	@top_builddir@/@ZLIBDIR@/zutil.c \
+	@top_builddir@/@ZLIBDIR@/crc32.h \
+	@top_builddir@/@ZLIBDIR@/deflate.h \
+	@top_builddir@/@ZLIBDIR@/gzguts.h \
+	@top_builddir@/@ZLIBDIR@/inffast.h \
+	@top_builddir@/@ZLIBDIR@/inffixed.h \
+	@top_builddir@/@ZLIBDIR@/inflate.h \
+	@top_builddir@/@ZLIBDIR@/inftrees.h \
+	@top_builddir@/@ZLIBDIR@/trees.h \
+	@top_builddir@/@ZLIBDIR@/zconf.h \
+	@top_builddir@/@ZLIBDIR@/zlib.h \
+	@top_builddir@/@ZLIBDIR@/zutil.h \
 	@top_builddir@/source/UnicodeNames.cpp
 @SYSTEM_ZLIB_FALSE@am__objects_4 = @top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-adler32.lo \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-compress.lo \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-crc32.lo \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-deflate.lo \
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-gzclose.lo \
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-gzlib.lo \
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-gzread.lo \
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-gzwrite.lo \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-infback.lo \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-inffast.lo \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-inflate.lo \
@@ -508,13 +584,28 @@ ZLIBSRCDIR = $(top_srcdir)/@ZLIBDIR@
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/compress.c \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/crc32.c \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/deflate.c \
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/gzclose.c \
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/gzlib.c \
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/gzread.c \
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/gzwrite.c \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/infback.c \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/inffast.c \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/inflate.c \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/inftrees.c \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/trees.c \
 @SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/uncompr.c \
-@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/zutil.c
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/zutil.c \
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/crc32.h \
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/deflate.h \
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/gzguts.h \
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/inffast.h \
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/inffixed.h \
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/inflate.h \
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/inftrees.h \
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/trees.h \
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/zconf.h \
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/zlib.h \
+@SYSTEM_ZLIB_FALSE@	@top_builddir@/@ZLIBDIR@/zutil.h
 @SYSTEM_ZLIB_TRUE@ZLIB_SOURCES = 
 AM_CFLAGS = $(AM_CPPFLAGS)
 @OLD_LIB_NAMES_TRUE@OLD_LIB_LDFLAGS = -module -avoid-version -Wl,--add-stdcall-alias
@@ -658,6 +749,18 @@ clean-libLTLIBRARIES:
 @top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-deflate.lo:  \
 	@top_builddir@/@ZLIBDIR@/$(am__dirstamp) \
 	@top_builddir@/@ZLIBDIR@/$(DEPDIR)/$(am__dirstamp)
+@top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-gzclose.lo:  \
+	@top_builddir@/@ZLIBDIR@/$(am__dirstamp) \
+	@top_builddir@/@ZLIBDIR@/$(DEPDIR)/$(am__dirstamp)
+@top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-gzlib.lo:  \
+	@top_builddir@/@ZLIBDIR@/$(am__dirstamp) \
+	@top_builddir@/@ZLIBDIR@/$(DEPDIR)/$(am__dirstamp)
+@top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-gzread.lo:  \
+	@top_builddir@/@ZLIBDIR@/$(am__dirstamp) \
+	@top_builddir@/@ZLIBDIR@/$(DEPDIR)/$(am__dirstamp)
+@top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-gzwrite.lo:  \
+	@top_builddir@/@ZLIBDIR@/$(am__dirstamp) \
+	@top_builddir@/@ZLIBDIR@/$(DEPDIR)/$(am__dirstamp)
 @top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-infback.lo:  \
 	@top_builddir@/@ZLIBDIR@/$(am__dirstamp) \
 	@top_builddir@/@ZLIBDIR@/$(DEPDIR)/$(am__dirstamp)
@@ -700,6 +803,18 @@ TECkit_Compiler_x86.la: $(TECkit_Compiler_x86_la_OBJECTS) $(TECkit_Compiler_x86_
 @top_builddir@/@ZLIBDIR@/TECkit_x86_la-deflate.lo:  \
 	@top_builddir@/@ZLIBDIR@/$(am__dirstamp) \
 	@top_builddir@/@ZLIBDIR@/$(DEPDIR)/$(am__dirstamp)
+@top_builddir@/@ZLIBDIR@/TECkit_x86_la-gzclose.lo:  \
+	@top_builddir@/@ZLIBDIR@/$(am__dirstamp) \
+	@top_builddir@/@ZLIBDIR@/$(DEPDIR)/$(am__dirstamp)
+@top_builddir@/@ZLIBDIR@/TECkit_x86_la-gzlib.lo:  \
+	@top_builddir@/@ZLIBDIR@/$(am__dirstamp) \
+	@top_builddir@/@ZLIBDIR@/$(DEPDIR)/$(am__dirstamp)
+@top_builddir@/@ZLIBDIR@/TECkit_x86_la-gzread.lo:  \
+	@top_builddir@/@ZLIBDIR@/$(am__dirstamp) \
+	@top_builddir@/@ZLIBDIR@/$(DEPDIR)/$(am__dirstamp)
+@top_builddir@/@ZLIBDIR@/TECkit_x86_la-gzwrite.lo:  \
+	@top_builddir@/@ZLIBDIR@/$(am__dirstamp) \
+	@top_builddir@/@ZLIBDIR@/$(DEPDIR)/$(am__dirstamp)
 @top_builddir@/@ZLIBDIR@/TECkit_x86_la-infback.lo:  \
 	@top_builddir@/@ZLIBDIR@/$(am__dirstamp) \
 	@top_builddir@/@ZLIBDIR@/$(DEPDIR)/$(am__dirstamp)
@@ -736,6 +851,18 @@ TECkit_x86.la: $(TECkit_x86_la_OBJECTS) $(TECkit_x86_la_DEPENDENCIES) $(EXTRA_TE
 @top_builddir@/@ZLIBDIR@/libTECkit_la-deflate.lo:  \
 	@top_builddir@/@ZLIBDIR@/$(am__dirstamp) \
 	@top_builddir@/@ZLIBDIR@/$(DEPDIR)/$(am__dirstamp)
+@top_builddir@/@ZLIBDIR@/libTECkit_la-gzclose.lo:  \
+	@top_builddir@/@ZLIBDIR@/$(am__dirstamp) \
+	@top_builddir@/@ZLIBDIR@/$(DEPDIR)/$(am__dirstamp)
+@top_builddir@/@ZLIBDIR@/libTECkit_la-gzlib.lo:  \
+	@top_builddir@/@ZLIBDIR@/$(am__dirstamp) \
+	@top_builddir@/@ZLIBDIR@/$(DEPDIR)/$(am__dirstamp)
+@top_builddir@/@ZLIBDIR@/libTECkit_la-gzread.lo:  \
+	@top_builddir@/@ZLIBDIR@/$(am__dirstamp) \
+	@top_builddir@/@ZLIBDIR@/$(DEPDIR)/$(am__dirstamp)
+@top_builddir@/@ZLIBDIR@/libTECkit_la-gzwrite.lo:  \
+	@top_builddir@/@ZLIBDIR@/$(am__dirstamp) \
+	@top_builddir@/@ZLIBDIR@/$(DEPDIR)/$(am__dirstamp)
 @top_builddir@/@ZLIBDIR@/libTECkit_la-infback.lo:  \
 	@top_builddir@/@ZLIBDIR@/$(am__dirstamp) \
 	@top_builddir@/@ZLIBDIR@/$(DEPDIR)/$(am__dirstamp)
@@ -770,6 +897,18 @@ libTECkit.la: $(libTECkit_la_OBJECTS) $(libTECkit_la_DEPENDENCIES) $(EXTRA_libTE
 	@top_builddir@/@ZLIBDIR@/$(am__dirstamp) \
 	@top_builddir@/@ZLIBDIR@/$(DEPDIR)/$(am__dirstamp)
 @top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-deflate.lo:  \
+	@top_builddir@/@ZLIBDIR@/$(am__dirstamp) \
+	@top_builddir@/@ZLIBDIR@/$(DEPDIR)/$(am__dirstamp)
+@top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-gzclose.lo:  \
+	@top_builddir@/@ZLIBDIR@/$(am__dirstamp) \
+	@top_builddir@/@ZLIBDIR@/$(DEPDIR)/$(am__dirstamp)
+@top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-gzlib.lo:  \
+	@top_builddir@/@ZLIBDIR@/$(am__dirstamp) \
+	@top_builddir@/@ZLIBDIR@/$(DEPDIR)/$(am__dirstamp)
+@top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-gzread.lo:  \
+	@top_builddir@/@ZLIBDIR@/$(am__dirstamp) \
+	@top_builddir@/@ZLIBDIR@/$(DEPDIR)/$(am__dirstamp)
+@top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-gzwrite.lo:  \
 	@top_builddir@/@ZLIBDIR@/$(am__dirstamp) \
 	@top_builddir@/@ZLIBDIR@/$(DEPDIR)/$(am__dirstamp)
 @top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-infback.lo:  \
@@ -811,6 +950,10 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_Compiler_x86_la-compress.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_Compiler_x86_la-crc32.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_Compiler_x86_la-deflate.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_Compiler_x86_la-gzclose.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_Compiler_x86_la-gzlib.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_Compiler_x86_la-gzread.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_Compiler_x86_la-gzwrite.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_Compiler_x86_la-infback.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_Compiler_x86_la-inffast.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_Compiler_x86_la-inflate.Plo@am__quote@
@@ -822,6 +965,10 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_x86_la-compress.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_x86_la-crc32.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_x86_la-deflate.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_x86_la-gzclose.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_x86_la-gzlib.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_x86_la-gzread.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_x86_la-gzwrite.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_x86_la-infback.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_x86_la-inffast.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_x86_la-inflate.Plo@am__quote@
@@ -833,6 +980,10 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_Compiler_la-compress.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_Compiler_la-crc32.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_Compiler_la-deflate.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_Compiler_la-gzclose.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_Compiler_la-gzlib.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_Compiler_la-gzread.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_Compiler_la-gzwrite.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_Compiler_la-infback.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_Compiler_la-inffast.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_Compiler_la-inflate.Plo@am__quote@
@@ -844,6 +995,10 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_la-compress.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_la-crc32.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_la-deflate.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_la-gzclose.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_la-gzlib.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_la-gzread.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_la-gzwrite.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_la-infback.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_la-inffast.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@@top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_la-inflate.Plo@am__quote@
@@ -906,6 +1061,34 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='@top_builddir@/@ZLIBDIR@/deflate.c' object='@top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-deflate.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(TECkit_Compiler_x86_la_CFLAGS) $(CFLAGS) -c -o @top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-deflate.lo `test -f '@top_builddir@/@ZLIBDIR@/deflate.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/deflate.c
+
+@top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-gzclose.lo: @top_builddir@/@ZLIBDIR@/gzclose.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(TECkit_Compiler_x86_la_CFLAGS) $(CFLAGS) -MT @top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-gzclose.lo -MD -MP -MF @top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_Compiler_x86_la-gzclose.Tpo -c -o @top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-gzclose.lo `test -f '@top_builddir@/@ZLIBDIR@/gzclose.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzclose.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) @top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_Compiler_x86_la-gzclose.Tpo @top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_Compiler_x86_la-gzclose.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='@top_builddir@/@ZLIBDIR@/gzclose.c' object='@top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-gzclose.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(TECkit_Compiler_x86_la_CFLAGS) $(CFLAGS) -c -o @top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-gzclose.lo `test -f '@top_builddir@/@ZLIBDIR@/gzclose.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzclose.c
+
+@top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-gzlib.lo: @top_builddir@/@ZLIBDIR@/gzlib.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(TECkit_Compiler_x86_la_CFLAGS) $(CFLAGS) -MT @top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-gzlib.lo -MD -MP -MF @top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_Compiler_x86_la-gzlib.Tpo -c -o @top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-gzlib.lo `test -f '@top_builddir@/@ZLIBDIR@/gzlib.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzlib.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) @top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_Compiler_x86_la-gzlib.Tpo @top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_Compiler_x86_la-gzlib.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='@top_builddir@/@ZLIBDIR@/gzlib.c' object='@top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-gzlib.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(TECkit_Compiler_x86_la_CFLAGS) $(CFLAGS) -c -o @top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-gzlib.lo `test -f '@top_builddir@/@ZLIBDIR@/gzlib.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzlib.c
+
+@top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-gzread.lo: @top_builddir@/@ZLIBDIR@/gzread.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(TECkit_Compiler_x86_la_CFLAGS) $(CFLAGS) -MT @top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-gzread.lo -MD -MP -MF @top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_Compiler_x86_la-gzread.Tpo -c -o @top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-gzread.lo `test -f '@top_builddir@/@ZLIBDIR@/gzread.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzread.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) @top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_Compiler_x86_la-gzread.Tpo @top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_Compiler_x86_la-gzread.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='@top_builddir@/@ZLIBDIR@/gzread.c' object='@top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-gzread.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(TECkit_Compiler_x86_la_CFLAGS) $(CFLAGS) -c -o @top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-gzread.lo `test -f '@top_builddir@/@ZLIBDIR@/gzread.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzread.c
+
+@top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-gzwrite.lo: @top_builddir@/@ZLIBDIR@/gzwrite.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(TECkit_Compiler_x86_la_CFLAGS) $(CFLAGS) -MT @top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-gzwrite.lo -MD -MP -MF @top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_Compiler_x86_la-gzwrite.Tpo -c -o @top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-gzwrite.lo `test -f '@top_builddir@/@ZLIBDIR@/gzwrite.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzwrite.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) @top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_Compiler_x86_la-gzwrite.Tpo @top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_Compiler_x86_la-gzwrite.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='@top_builddir@/@ZLIBDIR@/gzwrite.c' object='@top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-gzwrite.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(TECkit_Compiler_x86_la_CFLAGS) $(CFLAGS) -c -o @top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-gzwrite.lo `test -f '@top_builddir@/@ZLIBDIR@/gzwrite.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzwrite.c
 
 @top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-infback.lo: @top_builddir@/@ZLIBDIR@/infback.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(TECkit_Compiler_x86_la_CFLAGS) $(CFLAGS) -MT @top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-infback.lo -MD -MP -MF @top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_Compiler_x86_la-infback.Tpo -c -o @top_builddir@/@ZLIBDIR@/TECkit_Compiler_x86_la-infback.lo `test -f '@top_builddir@/@ZLIBDIR@/infback.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/infback.c
@@ -984,6 +1167,34 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(TECkit_x86_la_CFLAGS) $(CFLAGS) -c -o @top_builddir@/@ZLIBDIR@/TECkit_x86_la-deflate.lo `test -f '@top_builddir@/@ZLIBDIR@/deflate.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/deflate.c
 
+@top_builddir@/@ZLIBDIR@/TECkit_x86_la-gzclose.lo: @top_builddir@/@ZLIBDIR@/gzclose.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(TECkit_x86_la_CFLAGS) $(CFLAGS) -MT @top_builddir@/@ZLIBDIR@/TECkit_x86_la-gzclose.lo -MD -MP -MF @top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_x86_la-gzclose.Tpo -c -o @top_builddir@/@ZLIBDIR@/TECkit_x86_la-gzclose.lo `test -f '@top_builddir@/@ZLIBDIR@/gzclose.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzclose.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) @top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_x86_la-gzclose.Tpo @top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_x86_la-gzclose.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='@top_builddir@/@ZLIBDIR@/gzclose.c' object='@top_builddir@/@ZLIBDIR@/TECkit_x86_la-gzclose.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(TECkit_x86_la_CFLAGS) $(CFLAGS) -c -o @top_builddir@/@ZLIBDIR@/TECkit_x86_la-gzclose.lo `test -f '@top_builddir@/@ZLIBDIR@/gzclose.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzclose.c
+
+@top_builddir@/@ZLIBDIR@/TECkit_x86_la-gzlib.lo: @top_builddir@/@ZLIBDIR@/gzlib.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(TECkit_x86_la_CFLAGS) $(CFLAGS) -MT @top_builddir@/@ZLIBDIR@/TECkit_x86_la-gzlib.lo -MD -MP -MF @top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_x86_la-gzlib.Tpo -c -o @top_builddir@/@ZLIBDIR@/TECkit_x86_la-gzlib.lo `test -f '@top_builddir@/@ZLIBDIR@/gzlib.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzlib.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) @top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_x86_la-gzlib.Tpo @top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_x86_la-gzlib.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='@top_builddir@/@ZLIBDIR@/gzlib.c' object='@top_builddir@/@ZLIBDIR@/TECkit_x86_la-gzlib.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(TECkit_x86_la_CFLAGS) $(CFLAGS) -c -o @top_builddir@/@ZLIBDIR@/TECkit_x86_la-gzlib.lo `test -f '@top_builddir@/@ZLIBDIR@/gzlib.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzlib.c
+
+@top_builddir@/@ZLIBDIR@/TECkit_x86_la-gzread.lo: @top_builddir@/@ZLIBDIR@/gzread.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(TECkit_x86_la_CFLAGS) $(CFLAGS) -MT @top_builddir@/@ZLIBDIR@/TECkit_x86_la-gzread.lo -MD -MP -MF @top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_x86_la-gzread.Tpo -c -o @top_builddir@/@ZLIBDIR@/TECkit_x86_la-gzread.lo `test -f '@top_builddir@/@ZLIBDIR@/gzread.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzread.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) @top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_x86_la-gzread.Tpo @top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_x86_la-gzread.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='@top_builddir@/@ZLIBDIR@/gzread.c' object='@top_builddir@/@ZLIBDIR@/TECkit_x86_la-gzread.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(TECkit_x86_la_CFLAGS) $(CFLAGS) -c -o @top_builddir@/@ZLIBDIR@/TECkit_x86_la-gzread.lo `test -f '@top_builddir@/@ZLIBDIR@/gzread.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzread.c
+
+@top_builddir@/@ZLIBDIR@/TECkit_x86_la-gzwrite.lo: @top_builddir@/@ZLIBDIR@/gzwrite.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(TECkit_x86_la_CFLAGS) $(CFLAGS) -MT @top_builddir@/@ZLIBDIR@/TECkit_x86_la-gzwrite.lo -MD -MP -MF @top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_x86_la-gzwrite.Tpo -c -o @top_builddir@/@ZLIBDIR@/TECkit_x86_la-gzwrite.lo `test -f '@top_builddir@/@ZLIBDIR@/gzwrite.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzwrite.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) @top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_x86_la-gzwrite.Tpo @top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_x86_la-gzwrite.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='@top_builddir@/@ZLIBDIR@/gzwrite.c' object='@top_builddir@/@ZLIBDIR@/TECkit_x86_la-gzwrite.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(TECkit_x86_la_CFLAGS) $(CFLAGS) -c -o @top_builddir@/@ZLIBDIR@/TECkit_x86_la-gzwrite.lo `test -f '@top_builddir@/@ZLIBDIR@/gzwrite.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzwrite.c
+
 @top_builddir@/@ZLIBDIR@/TECkit_x86_la-infback.lo: @top_builddir@/@ZLIBDIR@/infback.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(TECkit_x86_la_CFLAGS) $(CFLAGS) -MT @top_builddir@/@ZLIBDIR@/TECkit_x86_la-infback.lo -MD -MP -MF @top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_x86_la-infback.Tpo -c -o @top_builddir@/@ZLIBDIR@/TECkit_x86_la-infback.lo `test -f '@top_builddir@/@ZLIBDIR@/infback.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/infback.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) @top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_x86_la-infback.Tpo @top_builddir@/@ZLIBDIR@/$(DEPDIR)/TECkit_x86_la-infback.Plo
@@ -1061,6 +1272,34 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libTECkit_la_CFLAGS) $(CFLAGS) -c -o @top_builddir@/@ZLIBDIR@/libTECkit_la-deflate.lo `test -f '@top_builddir@/@ZLIBDIR@/deflate.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/deflate.c
 
+@top_builddir@/@ZLIBDIR@/libTECkit_la-gzclose.lo: @top_builddir@/@ZLIBDIR@/gzclose.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libTECkit_la_CFLAGS) $(CFLAGS) -MT @top_builddir@/@ZLIBDIR@/libTECkit_la-gzclose.lo -MD -MP -MF @top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_la-gzclose.Tpo -c -o @top_builddir@/@ZLIBDIR@/libTECkit_la-gzclose.lo `test -f '@top_builddir@/@ZLIBDIR@/gzclose.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzclose.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) @top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_la-gzclose.Tpo @top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_la-gzclose.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='@top_builddir@/@ZLIBDIR@/gzclose.c' object='@top_builddir@/@ZLIBDIR@/libTECkit_la-gzclose.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libTECkit_la_CFLAGS) $(CFLAGS) -c -o @top_builddir@/@ZLIBDIR@/libTECkit_la-gzclose.lo `test -f '@top_builddir@/@ZLIBDIR@/gzclose.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzclose.c
+
+@top_builddir@/@ZLIBDIR@/libTECkit_la-gzlib.lo: @top_builddir@/@ZLIBDIR@/gzlib.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libTECkit_la_CFLAGS) $(CFLAGS) -MT @top_builddir@/@ZLIBDIR@/libTECkit_la-gzlib.lo -MD -MP -MF @top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_la-gzlib.Tpo -c -o @top_builddir@/@ZLIBDIR@/libTECkit_la-gzlib.lo `test -f '@top_builddir@/@ZLIBDIR@/gzlib.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzlib.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) @top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_la-gzlib.Tpo @top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_la-gzlib.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='@top_builddir@/@ZLIBDIR@/gzlib.c' object='@top_builddir@/@ZLIBDIR@/libTECkit_la-gzlib.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libTECkit_la_CFLAGS) $(CFLAGS) -c -o @top_builddir@/@ZLIBDIR@/libTECkit_la-gzlib.lo `test -f '@top_builddir@/@ZLIBDIR@/gzlib.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzlib.c
+
+@top_builddir@/@ZLIBDIR@/libTECkit_la-gzread.lo: @top_builddir@/@ZLIBDIR@/gzread.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libTECkit_la_CFLAGS) $(CFLAGS) -MT @top_builddir@/@ZLIBDIR@/libTECkit_la-gzread.lo -MD -MP -MF @top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_la-gzread.Tpo -c -o @top_builddir@/@ZLIBDIR@/libTECkit_la-gzread.lo `test -f '@top_builddir@/@ZLIBDIR@/gzread.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzread.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) @top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_la-gzread.Tpo @top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_la-gzread.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='@top_builddir@/@ZLIBDIR@/gzread.c' object='@top_builddir@/@ZLIBDIR@/libTECkit_la-gzread.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libTECkit_la_CFLAGS) $(CFLAGS) -c -o @top_builddir@/@ZLIBDIR@/libTECkit_la-gzread.lo `test -f '@top_builddir@/@ZLIBDIR@/gzread.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzread.c
+
+@top_builddir@/@ZLIBDIR@/libTECkit_la-gzwrite.lo: @top_builddir@/@ZLIBDIR@/gzwrite.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libTECkit_la_CFLAGS) $(CFLAGS) -MT @top_builddir@/@ZLIBDIR@/libTECkit_la-gzwrite.lo -MD -MP -MF @top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_la-gzwrite.Tpo -c -o @top_builddir@/@ZLIBDIR@/libTECkit_la-gzwrite.lo `test -f '@top_builddir@/@ZLIBDIR@/gzwrite.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzwrite.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) @top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_la-gzwrite.Tpo @top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_la-gzwrite.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='@top_builddir@/@ZLIBDIR@/gzwrite.c' object='@top_builddir@/@ZLIBDIR@/libTECkit_la-gzwrite.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libTECkit_la_CFLAGS) $(CFLAGS) -c -o @top_builddir@/@ZLIBDIR@/libTECkit_la-gzwrite.lo `test -f '@top_builddir@/@ZLIBDIR@/gzwrite.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzwrite.c
+
 @top_builddir@/@ZLIBDIR@/libTECkit_la-infback.lo: @top_builddir@/@ZLIBDIR@/infback.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libTECkit_la_CFLAGS) $(CFLAGS) -MT @top_builddir@/@ZLIBDIR@/libTECkit_la-infback.lo -MD -MP -MF @top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_la-infback.Tpo -c -o @top_builddir@/@ZLIBDIR@/libTECkit_la-infback.lo `test -f '@top_builddir@/@ZLIBDIR@/infback.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/infback.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) @top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_la-infback.Tpo @top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_la-infback.Plo
@@ -1137,6 +1376,34 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='@top_builddir@/@ZLIBDIR@/deflate.c' object='@top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-deflate.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libTECkit_Compiler_la_CFLAGS) $(CFLAGS) -c -o @top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-deflate.lo `test -f '@top_builddir@/@ZLIBDIR@/deflate.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/deflate.c
+
+@top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-gzclose.lo: @top_builddir@/@ZLIBDIR@/gzclose.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libTECkit_Compiler_la_CFLAGS) $(CFLAGS) -MT @top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-gzclose.lo -MD -MP -MF @top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_Compiler_la-gzclose.Tpo -c -o @top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-gzclose.lo `test -f '@top_builddir@/@ZLIBDIR@/gzclose.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzclose.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) @top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_Compiler_la-gzclose.Tpo @top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_Compiler_la-gzclose.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='@top_builddir@/@ZLIBDIR@/gzclose.c' object='@top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-gzclose.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libTECkit_Compiler_la_CFLAGS) $(CFLAGS) -c -o @top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-gzclose.lo `test -f '@top_builddir@/@ZLIBDIR@/gzclose.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzclose.c
+
+@top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-gzlib.lo: @top_builddir@/@ZLIBDIR@/gzlib.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libTECkit_Compiler_la_CFLAGS) $(CFLAGS) -MT @top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-gzlib.lo -MD -MP -MF @top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_Compiler_la-gzlib.Tpo -c -o @top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-gzlib.lo `test -f '@top_builddir@/@ZLIBDIR@/gzlib.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzlib.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) @top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_Compiler_la-gzlib.Tpo @top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_Compiler_la-gzlib.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='@top_builddir@/@ZLIBDIR@/gzlib.c' object='@top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-gzlib.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libTECkit_Compiler_la_CFLAGS) $(CFLAGS) -c -o @top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-gzlib.lo `test -f '@top_builddir@/@ZLIBDIR@/gzlib.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzlib.c
+
+@top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-gzread.lo: @top_builddir@/@ZLIBDIR@/gzread.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libTECkit_Compiler_la_CFLAGS) $(CFLAGS) -MT @top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-gzread.lo -MD -MP -MF @top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_Compiler_la-gzread.Tpo -c -o @top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-gzread.lo `test -f '@top_builddir@/@ZLIBDIR@/gzread.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzread.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) @top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_Compiler_la-gzread.Tpo @top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_Compiler_la-gzread.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='@top_builddir@/@ZLIBDIR@/gzread.c' object='@top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-gzread.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libTECkit_Compiler_la_CFLAGS) $(CFLAGS) -c -o @top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-gzread.lo `test -f '@top_builddir@/@ZLIBDIR@/gzread.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzread.c
+
+@top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-gzwrite.lo: @top_builddir@/@ZLIBDIR@/gzwrite.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libTECkit_Compiler_la_CFLAGS) $(CFLAGS) -MT @top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-gzwrite.lo -MD -MP -MF @top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_Compiler_la-gzwrite.Tpo -c -o @top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-gzwrite.lo `test -f '@top_builddir@/@ZLIBDIR@/gzwrite.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzwrite.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) @top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_Compiler_la-gzwrite.Tpo @top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_Compiler_la-gzwrite.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='@top_builddir@/@ZLIBDIR@/gzwrite.c' object='@top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-gzwrite.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libTECkit_Compiler_la_CFLAGS) $(CFLAGS) -c -o @top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-gzwrite.lo `test -f '@top_builddir@/@ZLIBDIR@/gzwrite.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/gzwrite.c
 
 @top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-infback.lo: @top_builddir@/@ZLIBDIR@/infback.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libTECkit_Compiler_la_CFLAGS) $(CFLAGS) -MT @top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-infback.lo -MD -MP -MF @top_builddir@/@ZLIBDIR@/$(DEPDIR)/libTECkit_Compiler_la-infback.Tpo -c -o @top_builddir@/@ZLIBDIR@/libTECkit_Compiler_la-infback.lo `test -f '@top_builddir@/@ZLIBDIR@/infback.c' || echo '$(srcdir)/'`@top_builddir@/@ZLIBDIR@/infback.c
