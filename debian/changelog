@@ -1,13 +1,21 @@
-teckit (2.5.9+ds1-1) experimental; urgency=medium
+teckit (2.5.10+ds1-1) unstable; urgency=medium
+
+  [ Norbert Preining ]
+  * New upstream version 2.5.10+ds1
+  * Update VCS and my email
+  * update symbols file
+  * remove --list-missing from dh_install call
+  * remove debian provided man pages, available in the dist
+  * update to dh12, install system man pages, make sure .la files are not warned
+  * make d-t-m the maintainer, and us two uploaders (to get bugs)
+  * exclude newer zlib files, too
+  * don't mangle to +ds2 but +ds1
+  * sync patches with TL
 
   [ Matthias Klose ]
   * Mark more symbols not seen on ppc64el when built with -O3.
 
-  [ Norbert Preining ]
-  * Update VCS and my email
-  * new upstream release
-
- -- Norbert Preining <norbert@preining.info>  Tue, 02 Apr 2019 12:31:19 +0900
+ -- Norbert Preining <norbert@preining.info>  Thu, 04 Jun 2020 14:18:42 +0900
 
 teckit (2.5.8+ds2-5) unstable; urgency=medium
 
