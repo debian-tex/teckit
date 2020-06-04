@@ -8,6 +8,6 @@
 version=4
 
 # Current automated tarball release at GitHub project
-opts=dversionmangle=s/\+(debian|dfsg|ds|deb)(\.?\d+)?$//,repacksuffix=+ds2,\
+opts=dversionmangle=s/\+(debian|dfsg|ds|deb)(\.?\d+)?$//,repacksuffix=+ds1,\
 pgpsigurlmangle=s/(\d\S+)\.tar\.gz/$1\.tar\.gz\.asc/ \
   https://github.com/silnrsi/teckit/releases .*/teckit-(\d\S+)\.tar\.gz debian true
