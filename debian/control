@@ -10,7 +10,7 @@ Priority: optional
 Maintainer: Debian TeX Maintainers <debian-tex-maint@lists.debian.org>
 Uploaders: Daniel Glassey <wdg@debian.org>,
 	Norbert Preining <norbert@preining.info>
-Standards-Version: 4.2.1
+Standards-Version: 4.5.0
 Homepage: https://github.com/silnrsi/teckit
 Vcs-Git: https://github.com/debian-tex/teckit.git
 Vcs-Browser: https://github.com/debian-tex/teckit
