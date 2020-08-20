@@ -11,11 +11,12 @@ teckit (2.5.10+ds1-1) unstable; urgency=medium
   * exclude newer zlib files, too
   * don't mangle to +ds2 but +ds1
   * sync patches with TL
+  * bump standards version, no changes necessary
 
   [ Matthias Klose ]
   * Mark more symbols not seen on ppc64el when built with -O3.
 
- -- Norbert Preining <norbert@preining.info>  Thu, 04 Jun 2020 14:18:42 +0900
+ -- Norbert Preining <norbert@preining.info>  Thu, 20 Aug 2020 15:05:01 +0900
 
 teckit (2.5.8+ds2-5) unstable; urgency=medium
 
