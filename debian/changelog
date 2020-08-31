@@ -1,9 +1,3 @@
-teckit (2.5.10+ds1-2) UNRELEASED; urgency=medium
-
-  * Update symbols file. This hopefully (Closes: #969152).
-
- -- Hilmar Preusse <hille42@web.de>  Sat, 29 Aug 2020 13:51:31 +0200
-
 teckit (2.5.10+ds1-1) unstable; urgency=medium
 
   [ Norbert Preining ]
