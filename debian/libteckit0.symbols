@@ -124,7 +124,8 @@ libTECkit_Compiler.so.0 libteckit0 #MINVER#
  _ZN8Compiler4RuleD1Ev@Base 2.5.8
  _ZN8Compiler4RuleD2Ev@Base 2.5.8
  _ZN8Compiler5ErrorEPKcS1_j@Base 2.5.8
- _ZN8Compiler5alignERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEm@Base 2.5.9
+ (arch-bits=64)_ZN8Compiler5alignERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEm@Base 2.5.9
+ (arch-bits=32)_ZN8Compiler5alignERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEj@Base 2.5.9
  _ZN8Compiler6asUTF8ENSt7__cxx1112basic_stringIjSt11char_traitsIjESaIjEEE@Base 2.5.8
  _ZN8Compiler6xmlOutEPKc@Base 2.5.8
  _ZN8Compiler6xmlOutERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE@Base 2.5.8
@@ -192,7 +193,8 @@ libTECkit_Compiler.so.0 libteckit0 #MINVER#
  (optional=templinst|subst)_ZNSt6vectorItSaItEE17_M_default_appendE{size_t}@Base 2.5.8
  (optional=templinst)_ZNSt6vectorItSaItEE17_M_realloc_insertIJRKtEEEvN9__gnu_cxx17__normal_iteratorIPtS1_EEDpOT_@Base 2.5.8
  _ZNSt7__cxx1112basic_stringIjSt11char_traitsIjESaIjEE10_M_disposeEv@Base 2.5.10
- _ZNSt7__cxx1112basic_stringIjSt11char_traitsIjESaIjEE8_M_eraseEmm@Base 2.5.9
+ (arch-bits=64)_ZNSt7__cxx1112basic_stringIjSt11char_traitsIjESaIjEE8_M_eraseEmm@Base 2.5.9
+ (arch-bits=32)_ZNSt7__cxx1112basic_stringIjSt11char_traitsIjESaIjEE8_M_eraseEjj@Base 2.5.9
  (optional=templinst)_ZNSt7__cxx1112basic_stringIjSt11char_traitsIjESaIjEE9_M_assignERKS4_@Base 2.5.8
  _ZNSt7__cxx1112basic_stringIjSt11char_traitsIjESaIjEEC1ERKS4_@Base 2.5.10
  _ZNSt7__cxx1112basic_stringIjSt11char_traitsIjESaIjEEC2ERKS4_@Base 2.5.10
