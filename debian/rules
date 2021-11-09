@@ -12,4 +12,3 @@ override_dh_clean:
 override_dh_install:
 	chrpath -d debian/tmp/usr/bin/* debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/*so*
 	dh_install
-

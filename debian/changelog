@@ -79,7 +79,7 @@ teckit (2.5.8+ds2-1) experimental; urgency=medium
       standards 4.2.1 (no changes)
       add breaks/replaces on current texlive
   * d/copyright add Files-Excluded
-      update licensing of some files 
+      update licensing of some files
 
  -- Daniel Glassey <wdg@debian.org>  Wed, 31 Oct 2018 16:24:45 +0700
 
@@ -88,9 +88,9 @@ teckit (2.5.4~svn140+ds2-1) experimental; urgency=medium
   * Initial release to Debian, Closes: #805054
   * +ds2 source removes expat source
   * Add patches from texlive-bin-2015.20150524.37493
-  * Upload to experimental to co-ordinate with debian-tex-maint  
+  * Upload to experimental to co-ordinate with debian-tex-maint
   * Conflict with texlive-binaries (<= 2015.20150524.37493-7)
-      both contain teckit_compile 
+      both contain teckit_compile
   * Improve description
   * Add Debian TeX and Norbert Preining as uploaders
 
