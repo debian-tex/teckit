@@ -2,6 +2,7 @@ teckit (2.5.11+ds1-1) UNRELEASED; urgency=medium
 
   * New upstream version 2.5.11+ds1
   * "Rules-Requires-Root: no", dh compat 13.
+  * Lintian stuff, incl. Overrides.
 
  -- Hilmar Preusse <hille42@web.de>  Tue, 09 Nov 2021 22:56:59 +0100
 
