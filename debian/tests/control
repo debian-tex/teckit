@@ -1,0 +1,9 @@
+Tests: test-suite
+Depends: debhelper-compat (=13),
+	build-essential,
+	pkg-config,
+	chrpath,
+	zlib1g-dev,
+	libexpat1-dev,
+	pkg-kde-tools
+Restrictions: build-needed
