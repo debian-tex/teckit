@@ -7,7 +7,7 @@ Build-Depends: debhelper-compat (=13),
                pkg-kde-tools
 Section: text
 Priority: optional
-Maintainer: Debian TeX Maintainers <debian-tex-maint@lists.debian.org>
+Maintainer: Debian TeX Task Force <debian-tex-maint@lists.debian.org>
 Uploaders: Daniel Glassey <wdg@debian.org>,
 	Norbert Preining <norbert@preining.info>,
 	Hilmar Preusse <hille42@web.de>,
