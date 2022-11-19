@@ -5,5 +5,5 @@ Depends: debhelper-compat (=13),
 	chrpath,
 	zlib1g-dev,
 	libexpat1-dev,
-	pkg-kde-tools
+	dh-sequence-pkgkde-symbolshelper
 Restrictions: build-needed
