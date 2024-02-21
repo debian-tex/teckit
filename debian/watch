@@ -8,7 +8,8 @@
 version=4
 
 # Current automated tarball release at GitHub project
-opts="repack,compression=gz,repacksuffix=+ds1,dversionmangle=s/\+ds1//,\
-pgpsigurlmangle=s@archive/refs/tags@releases/download@;\
-s@v([^\/]+)\.tar\.gz@v$1/teckit-$1\.tar\.gz@;s/$/.asc/" \
-  https://github.com/silnrsi/teckit/tags .*/v?(\d+\.\d+\.\d+)\.tar\.gz
+opts="searchmode=plain,repack,compression=xz,repacksuffix=+ds1,dversionmangle=s/\+ds1//, \
+pgpsigurlmangle=s%$%.asc%, \
+filenamemangle=s%v?@ANY_VERSION@.tar.gz%-$1.tar.gz%" \
+  https://api.github.com/repos/silnrsi/teckit/releases \
+  https://github.com/silnrsi/teckit/releases/download/v(\d+\.\d+\.\d+)/teckit@ANY_VERSION@.tar.gz
