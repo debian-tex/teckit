@@ -15,8 +15,10 @@ Files: SFconv/UtfCodec.*
 Copyright: Copyright 2011, SIL International
 License: LGPL-2.1+ or GPL-2+ or MPL-1.1
 
-Files: debian*/*
-Copyright: 2015 Daniel Glassey <wdg@debian.org>
+Files: debian/*
+Copyright: 2015 - 2018 Daniel Glassey <wdg@debian.org>
+	   2019 - 2020 Norbert Preining <norbert@preining.info>
+	   2020 - 2024 Hilmar Preusse <hille42@web.de>
 License: LGPL-2.1+
 
 License: LGPL-2.1+

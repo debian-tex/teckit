@@ -1,6 +1,8 @@
 teckit (2.5.12+ds1-2) UNRELEASED; urgency=medium
 
   * Remove obsolete patches, add DEP-3 header to the remaining.
+  * Update d/copyright.
+  * Bump Standards version, no changes needed.
 
  -- Hilmar Preusse <hille42@web.de>  Thu, 22 Feb 2024 07:41:23 +0000
 
