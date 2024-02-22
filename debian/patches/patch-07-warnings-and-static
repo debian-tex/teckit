@@ -1,3 +1,8 @@
+Description: Fix compiler warnings
+Forwarded: https://github.com/silnrsi/teckit/issues/2
+Author: Norbert Preining <norbert@preining.info>
+Last-Update: 2020-06-04
+
 diff -ur teckit-2.5.10/source/Compiler.cpp teckit-src/source/Compiler.cpp
 --- teckit-2.5.10/source/Compiler.cpp	Tue May 05 23:09:53 2020
 +++ teckit-src/source/Compiler.cpp	Wed May 06 09:00:34 2020
