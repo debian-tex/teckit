@@ -10,7 +10,7 @@ Priority: optional
 Maintainer: Debian TeX Task Force <debian-tex-maint@lists.debian.org>
 Uploaders: Daniel Glassey <wdg@debian.org>,
 	Norbert Preining <norbert@preining.info>,
-	Hilmar Preusse <hille42@web.de>,
+	Hilmar Preuße <hille42@debian.org>,
 Standards-Version: 4.6.2
 Rules-Requires-Root: no
 Homepage: https://github.com/silnrsi/teckit
