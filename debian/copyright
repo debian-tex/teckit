@@ -5,7 +5,8 @@ Upstream-Contact: SIL International http://scripts.sil.org/Support
 Source: http://scripts.sil.org/TECkit
 Files-Excluded:
     SFconv/expat
-    zlib-1.2.*/*.c
+    debian-src
+    zlib-1.2.*
 
 Files: *
 Copyright: Copyright 2002-2014, SIL International
