@@ -7,7 +7,7 @@ teckit (2.5.13+ds-1) UNRELEASED; urgency=medium
   * Bump Standards version, no changes needed.
   * Fix d/watch file finally (thanks Soren Stoutner).
 
- -- Hilmar Preusse <hille42@web.de>  Thu, 22 Feb 2024 07:41:23 +0000
+ -- Hilmar Preuße <hille42@debian.org>  Thu, 22 Feb 2024 07:41:23 +0000
 
 teckit (2.5.12+ds1-1) unstable; urgency=medium
 
