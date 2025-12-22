@@ -4,8 +4,10 @@ Upstream-Name: TECkit
 Upstream-Contact: SIL International http://scripts.sil.org/Support
 Source: http://scripts.sil.org/TECkit
 Files-Excluded:
+    .github
     SFconv/expat
     debian-src
+    docs/Calling_TECkit_from_VB.doc
     zlib-1.2.*
 
 Files: *
