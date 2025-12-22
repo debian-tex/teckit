@@ -9,9 +9,16 @@ export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 override_dh_clean:
 	dh_clean -X.orig
 
+# Weird hack to link with systems zlib.
+execute_before_dh_auto_build:
+	sed -i "s@^LIBS =@LIBS = -lz@" bin/Makefile
+
 override_dh_install:
 	chrpath -d debian/tmp/usr/bin/* debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/*so*
 	dh_install
+
+override_dh_compress:
+	dh_compress -X.pdf
 
 override_dh_auto_test:
 	: do nothing here, otherwise test suite is executed

@@ -1,0 +1,33 @@
+Description: Don't try to read files of embedded zlib sources
+Forwarded: not needed, hopefulle better solution from upstream pending
+Author: Hilmar Preuße <hille42@web.de>
+Last-Update: 2025-12-22
+
+--- teckit-src1/source/Makefile.am	2024-03-03 00:13:32.153693106 +0100
++++ teckit-src/source/Makefile.am	2025-12-21 14:41:57.961006969 +0100
+@@ -40,21 +40,21 @@
+ if OLD_LIB_NAMES
+ OLD_LIB_LDFLAGS = -module -avoid-version -Wl,--add-stdcall-alias
+ TECkit_x86_la_CFLAGS = $(ZLIB_CFLAGS)
+-TECkit_x86_la_SOURCES = @top_builddir@/source/Engine.cpp @top_build_prefix@source/Engine_ver.rc $(ZLIB_SOURCES)
++TECkit_x86_la_SOURCES = @top_builddir@/source/Engine.cpp @top_build_prefix@source/Engine_ver.rc
+ TECkit_x86_la_LDFLAGS = $(LDFLAGS) $(OLD_LIB_LDFLAGS) -no-undefined $(LDZLIB)
+ TECkit_x86_la_DEPENDENCIES = $(ZLIBDEP)
+ TECkit_Compiler_x86_la_CFLAGS = $(ZLIB_CFLAGS)
+-TECkit_Compiler_x86_la_SOURCES = @top_builddir@/source/Compiler.cpp $(ZLIB_SOURCES)
++TECkit_Compiler_x86_la_SOURCES = @top_builddir@/source/Compiler.cpp
+ TECkit_Compiler_x86_la_SOURCES += @top_builddir@/source/UnicodeNames.cpp
+ TECkit_Compiler_x86_la_LDFLAGS = $(LDFLAGS) $(OLD_LIB_LDFLAGS) -no-undefined $(LDZLIB)
+ TECkit_Compiler_x86_la_DEPENDENCIES = $(ZLIBDEP)
+ else
+ libTECkit_la_CFLAGS = $(ZLIB_CFLAGS)
+-libTECkit_la_SOURCES = @top_builddir@/source/Engine.cpp $(ZLIB_SOURCES)
++libTECkit_la_SOURCES = @top_builddir@/source/Engine.cpp
+ libTECkit_la_LDFLAGS = $(LDFLAGS) -no-undefined $(LDZLIB)
+ libTECkit_la_DEPENDENCIES = $(ZLIBDEP)
+ libTECkit_Compiler_la_CFLAGS = $(ZLIB_CFLAGS)
+-libTECkit_Compiler_la_SOURCES = @top_builddir@/source/Compiler.cpp $(ZLIB_SOURCES)
++libTECkit_Compiler_la_SOURCES = @top_builddir@/source/Compiler.cpp
+ libTECkit_Compiler_la_SOURCES += @top_builddir@/source/UnicodeNames.cpp
+ libTECkit_Compiler_la_LDFLAGS = $(LDFLAGS) -no-undefined $(LDZLIB)
+ libTECkit_Compiler_la_DEPENDENCIES = $(ZLIBDEP)

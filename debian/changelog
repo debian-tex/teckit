@@ -1,5 +1,7 @@
-teckit (2.5.12+ds1-2) UNRELEASED; urgency=medium
+teckit (2.5.13+ds-1) UNRELEASED; urgency=medium
 
+  * New upstream release.
+    - Add some code (hacks?) to build w/o the embedded zlib.
   * Remove obsolete patches, add DEP-3 header to the remaining.
   * Update d/copyright.
   * Bump Standards version, no changes needed.
