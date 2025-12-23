@@ -1,5 +1,5 @@
 Description: Don't try to read files of embedded zlib sources
-Forwarded: not needed, hopefulle better solution from upstream pending
+Forwarded: not needed, hopefully better solution from upstream pending
 Author: Hilmar Preuße <hille42@web.de>
 Last-Update: 2025-12-22
 

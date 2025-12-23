@@ -6,6 +6,9 @@ teckit (2.5.13+ds-1) UNRELEASED; urgency=medium
   * Update d/copyright.
   * Bump Standards version, no changes needed.
   * Fix d/watch file finally (thanks Soren Stoutner).
+  * Lintian:
+    - W: old-fsf-address-in-copyright-file
+    - W: build-depends-on-obsolete-package
 
  -- Hilmar Preuße <hille42@debian.org>  Thu, 22 Feb 2024 07:41:23 +0000
 

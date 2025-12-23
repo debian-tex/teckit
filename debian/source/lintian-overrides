@@ -1,3 +1,6 @@
 teckit source: very-long-line-length-in-source-file
 # Is pulled in by virtual package dh-sequence-pkgkde-symbolshelper
 teckit source: missing-build-dependency-for-dh-addon
+# Upstream decided not to sign packages any more.
+teckit source: debian-watch-could-verify-download
+teckit source: debian-watch-does-not-check-openpgp-signature

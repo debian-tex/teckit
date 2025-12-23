@@ -1,6 +1,6 @@
 Source: teckit
 Build-Depends: debhelper-compat (=13),
-               pkg-config,
+               pkgconf,
                chrpath,
                zlib1g-dev,
                libexpat1-dev,
