@@ -1,4 +1,4 @@
-teckit (2.5.13+ds-1) UNRELEASED; urgency=medium
+teckit (2.5.13+ds-1) unstable; urgency=medium
 
   * New upstream release.
     - Add some code (hacks?) to build w/o the embedded zlib.
@@ -10,7 +10,7 @@ teckit (2.5.13+ds-1) UNRELEASED; urgency=medium
     - W: old-fsf-address-in-copyright-file
     - W: build-depends-on-obsolete-package
 
- -- Hilmar Preuße <hille42@debian.org>  Thu, 22 Feb 2024 07:41:23 +0000
+ -- Hilmar Preuße <hille42@debian.org>  Wed, 24 Dec 2025 13:04:44 +0100
 
 teckit (2.5.12+ds1-1) unstable; urgency=medium
 
