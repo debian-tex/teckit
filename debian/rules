@@ -10,6 +10,7 @@ override_dh_clean:
 	dh_clean -X.orig
 
 # Weird hack to link with systems zlib.
+# Request for better solution: https://github.com/silnrsi/teckit/issues/35
 execute_before_dh_auto_build:
 	sed -i "s@^LIBS =@LIBS = -lz@" bin/Makefile
 
