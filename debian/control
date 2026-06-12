@@ -8,8 +8,7 @@ Build-Depends: debhelper-compat (=13),
 Section: text
 Priority: optional
 Maintainer: Debian TeX Task Force <debian-tex-maint@lists.debian.org>
-Uploaders: Daniel Glassey <wdg@debian.org>,
-	Norbert Preining <norbert@preining.info>,
+Uploaders: Norbert Preining <norbert@preining.info>,
 	Hilmar Preuße <hille42@debian.org>,
 Standards-Version: 4.7.3
 Rules-Requires-Root: no

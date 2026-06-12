@@ -1,6 +1,8 @@
 teckit (2.5.13+ds-2) UNRELEASED; urgency=medium
 
   * Upstream again delivers signed tar balls.
+  * Remove Daniel Glassey <wdg@debian.org> form Uploaders
+    (Closes: #1139800).
 
  -- Hilmar Preuße <hille42@debian.org>  Sun, 18 Jan 2026 00:19:07 +0100
 
